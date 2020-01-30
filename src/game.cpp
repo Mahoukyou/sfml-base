@@ -32,6 +32,7 @@ void Game::process_pending_scene()
 	if (pending_scene_)
 	{
 		current_scene_ = std::move(pending_scene_.value());
+		pending_scene_ = std::nullopt;
 	}
 }
 
